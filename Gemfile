@@ -39,7 +39,7 @@ gem 'binding_of_caller'
 gem 'meta_request'
 gem 'awesome_print'
 gem 'authbuttons-rails'
-
+gem "font-awesome-rails"
 gem 'pry'
 gem 'pry_debug'
 gem 'pry-remote'

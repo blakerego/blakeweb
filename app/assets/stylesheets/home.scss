@@ -1,3 +1,8 @@
+
+body {
+  background-color: #FFFFFF;
+}
+
 @font-face {
   font-family: 'BohemianTypewriter';    
   src: font-url('BohemianTypewriter.ttf');
@@ -6,11 +11,26 @@
 }
 
 
-.profile-image {
-  width: 331px;
-  .name {
-    font-size: 42px;
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .profile-image {
+    margin: 9px 0 0 25%;
+    position: absolute;
     text-align: center;
-    font-family: 'BohemianTypewriter';
+    width: 331px;
+    .name {
+      font-size: 42px;
+      text-align: center;
+      font-family: 'BohemianTypewriter';
+    }
+  }  
+}
+
+ul.icons {
+  list-style: none;
+  li {
+    margin-bottom: 5px;
   }
 }
