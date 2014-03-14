@@ -1,0 +1,11 @@
+development: &development
+  adapter: postgresql
+  host: localhost
+  database: detroit_dev
+  encoding: unicode
+  
+test: &test
+  adapter: postgresql
+  host: localhost
+  database: detroit_test
+  encoding: unicode

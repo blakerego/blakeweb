@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'BohemianTypewriter';    
+  src: url('/assets/nokiapureheadlinerg-webfont.eot');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.profile-image {
+  width: 331px;
+  .name {
+    font-size: 42px;
+    text-align: center;
+    font-family: 'BohemianTypewriter';
+  }
+}
