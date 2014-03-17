@@ -16,14 +16,19 @@ body {
   width: 100%;
   height: 100%;
   .profile-image {
-    margin: 9px 0 0 25%;
-    position: absolute;
+    // margin: 9px 0 0 25%;
+    // position: absolute;
     text-align: center;
-    width: 331px;
+    width: 500px;
+    margin-top: 20px;
     .name {
       font-size: 42px;
       text-align: center;
       font-family: 'BohemianTypewriter';
+      border-top: 5px solid;
+      border-bottom: 5px solid;
+      padding: 6px;
+      margin-bottom: 12px;
     }
   }  
 }
