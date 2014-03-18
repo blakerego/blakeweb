@@ -39,43 +39,37 @@
 
     // Initialises the testbed and starts the default demo.
     function init() {
-      items = {};
 
-      list = $('#demo-select');
-      playing = true;
-      renderer = 'WebGLRenderer';
-      container = $('#container');
-      $renderer = $('#renderer-select a');
+        items = {};
 
-      var item;
+        list = $('#demo-select');
+        playing = true;
+        renderer = 'WebGLRenderer';
+        container = $('#container');
+        $renderer = $('#renderer-select a');
 
-      for (var name in DEMOS) {
-        item = $('<a href="#"/>')
-            .click(generateClick(name))
-            .data('demo', name)
-            .text(name);
+        var item;
 
-        items[name] = item;
-        list.append(item);
-      }
+        for (var name in DEMOS) {
 
-      // Append stats.
+            item = $('<a href="#"/>')
+                .click(generateClick(name))
+                .data('demo', name)
+                .text(name);
 
-      $renderer.click(onRendererSelected);
-      $(window).bind('keydown', onKeyDown);
+            items[name] = item;
+            list.append(item);
+        }
 
-      // Set default demo and start updating.
-      setDemo('Balloon');
-      update();
+        // Append stats.
 
-      // Highlight current renderer.
-      $renderer.each(function(index, el) {
-          var $el = $(el);
-          var type = self[ $el.data('renderer') ];
-          if ( demo.renderer instanceof type ) {
-              $el.addClass('active');
-          }
-      });
+        $renderer.click(onRendererSelected);
+        $(window).bind('keydown', onKeyDown);
+
+        // Set default demo and start updating.
+        setDemo('Balloon');
+        update();
+
     }
 
     // Generates a click handler.
@@ -88,10 +82,13 @@
 
     // Updates current demo.
     function update() {
-      requestAnimationFrame(update);
-      if (playing && demo) {
-          demo.step();
-      }
+
+        requestAnimationFrame(update);
+
+        if (playing && demo) {
+            demo.step();
+        }
+
     }
 
     // Sets the current demo.
@@ -103,7 +100,7 @@
           demo = null;
       }
       // Initialise new demo.
-      demo = new DEMOS['Cloth']();
+      demo = new DEMOS['Balloon']();
       demo.init(container.get(0), new self[ renderer ]());
       // Activate / deactivate links.
       for (var id in items) {
