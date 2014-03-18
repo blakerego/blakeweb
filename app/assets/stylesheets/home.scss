@@ -11,13 +11,11 @@ body {
 }
 
 
-.container {
+#container {
   position: relative;
   width: 100%;
   height: 100%;
   .profile-image {
-    // margin: 9px 0 0 25%;
-    // position: absolute;
     text-align: center;
     width: 500px;
     margin-top: 20px;
@@ -30,7 +28,15 @@ body {
       padding: 6px;
       margin-bottom: 12px;
     }
-  }  
+  }
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 ul.icons {
