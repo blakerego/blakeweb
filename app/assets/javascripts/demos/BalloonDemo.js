@@ -26,7 +26,7 @@ BalloonDemo = (function(_super) {
       return this.mouse.pos.set(this.width / 2, this.height / 3);
     }
 
-  }
+  };
 
   BalloonDemo.prototype.setup = function(full) {
     var attraction, i, max, p, s, _i, _results;
@@ -50,6 +50,29 @@ BalloonDemo = (function(_super) {
       _results.push(this.physics.springs.push(s));
     }
     return _results;
+  };
+
+  BalloonDemo.prototype.init = function(container, renderer) {
+    var particle, _i, _len, _ref, _ref1;
+
+    this.container = container;
+    this.renderer = renderer != null ? renderer : new WebGLRenderer();
+    this.setup(renderer.gl != null);
+    _ref = this.physics.particles;
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      particle = _ref[_i];
+      if ((_ref1 = particle.colour) == null) {
+        particle.colour = Random.item(Demo.COLOURS);
+      }
+    }
+    document.addEventListener('touchmove', this.mousemove, false);
+    document.addEventListener('mousemove', this.mousemove, false);
+    document.addEventListener('resize', this.resize, false);
+    this.container.appendChild(this.renderer.domElement);
+    this.renderer.mouse = this.mouse;
+    this.renderer.init(this.physics);
+    this.mousemove({'preventDefault' : function (){}} );
+    return this.resize();
   };
 
   return BalloonDemo;
