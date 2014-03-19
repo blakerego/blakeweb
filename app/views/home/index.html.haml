@@ -42,7 +42,6 @@
 
         items = {};
 
-        list = $('#demo-select');
         playing = true;
         renderer = 'WebGLRenderer';
         container = $('#container');
@@ -50,18 +49,6 @@
 
         var item;
 
-        for (var name in DEMOS) {
-
-            item = $('<a href="#"/>')
-                .click(generateClick(name))
-                .data('demo', name)
-                .text(name);
-
-            items[name] = item;
-            list.append(item);
-        }
-
-        // Append stats.
 
         $renderer.click(onRendererSelected);
         $(window).bind('keydown', onKeyDown);
@@ -69,7 +56,6 @@
         // Set default demo and start updating.
         setDemo('Balloon');
         update();
-
     }
 
     // Generates a click handler.

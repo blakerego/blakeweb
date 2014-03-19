@@ -7,6 +7,7 @@ var Demo,
 
 Demo = (function() {
   Demo.COLOURS = ['DC0048', 'F14646', '4AE6A9', '7CFF3F', '4EC9D9', 'E4272E'];
+  // Demo.COLOURS = ['FF0000', '00FF00', '0000FF', 'FFFFFF', '000000', 'af0923'];
 
   function Demo() {
     this.mousemove = __bind(this.mousemove, this);

@@ -15,6 +15,19 @@ BalloonDemo = (function(_super) {
     return _ref;
   }
 
+  BalloonDemo.prototype.mousemove = function(event) {
+    var touch;
+
+    event.preventDefault();
+    if (event.touches && !!event.touches.length) {
+      touch = event.touches[0];
+      return this.mouse.pos.set(touch.pageX, touch.pageY);
+    } else {
+      return this.mouse.pos.set(this.width / 2, this.height / 2);
+    }
+
+  }
+
   BalloonDemo.prototype.setup = function(full) {
     var attraction, i, max, p, s, _i, _results;
 
