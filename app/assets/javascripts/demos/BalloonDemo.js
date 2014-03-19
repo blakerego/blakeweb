@@ -23,7 +23,7 @@ BalloonDemo = (function(_super) {
       touch = event.touches[0];
       return this.mouse.pos.set(touch.pageX, touch.pageY);
     } else {
-      return this.mouse.pos.set(this.width / 2, this.height / 2);
+      return this.mouse.pos.set(this.width / 2, this.height / 3);
     }
 
   }
