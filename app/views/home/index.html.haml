@@ -54,7 +54,8 @@
         $(window).bind('keydown', onKeyDown);
 
         // Set default demo and start updating.
-        setDemo('Balloon');
+        // setDemo('Balloon');
+        setDemo('Cloth');
         update();
     }
 
@@ -87,6 +88,7 @@
       }
       // Initialise new demo.
       demo = new DEMOS['Balloon']();
+      // demo = new DEMOS['Cloth']();
       demo.init(container.get(0), new self[ renderer ]());
       // Activate / deactivate links.
       for (var id in items) {
