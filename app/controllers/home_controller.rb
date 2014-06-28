@@ -6,4 +6,7 @@ class HomeController < ApplicationController
   def page2
   end
 
+  def cv
+  end
+
 end

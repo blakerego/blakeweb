@@ -5,6 +5,7 @@ Detroit::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get '/page2' => 'home#page2'
+  get '/cv' => 'home#cv'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
