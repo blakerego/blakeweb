@@ -86,8 +86,11 @@ ul.icons {
 }
 
 .cv {
-  h1, h2, h3 {
+  h1, h2 {
     font-family: 'BohemianTypewriter';
+  }
+  h2 {
+    font-size: 20px;
   }
   .header {
     text-align: center;
@@ -103,8 +106,9 @@ ul.icons {
     }
   }
   ul.work-summary-items {
+    padding-left: 20px;
     li {
-      list-style: none;
+
     }
   }
 }
