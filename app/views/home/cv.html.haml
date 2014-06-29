@@ -1,5 +1,5 @@
 
-#container
+.container
   .cv
     .row
       .col-md-6.col-md-offset-3.col-sm-10.col-sm-offset-1.col-xs-12
@@ -22,8 +22,74 @@
             Major in applied physics with a minor in applied mathematics
 
 
+    .row
+      .col-md-12.header
+        %h1
+          Technical Summary
+      .col-md-10.col-md-offset-2.col-sm-12
+        %h3
+          Skills
+        %ul.work-summary-items
+          %li
+            Ruby within the context of the Ruby on Rails framework
+          %li
+            Python
+          %li
+            Javascript: jQuery, Angular
+          %li
+            Front-end markup technologies, including HTML5, CSS3, SCSS, less
+          %li
+            C# Web: MVC3 asp.net applications with Entity Framework ORM
+          %li
+            C# Desktop: Model-view-presenter based Windows platform applications using libraries such as Infragistics and DevExpress
+          %li
+            Java Web: Spring Framework with Hibernate ORM
 
-    / .row
-    /   .col-md-12.header
-    /     %h1
-    /       Experience
+    .row
+      .col-md-12.header
+        %h1
+          Experience
+      .col-md-10.col-md-offset-2.col-sm-12
+        %h2
+          WeWork
+        .experience-info
+          %p.title Software Engineer
+          %p.dates March 2013 - September 2013
+          %p.technologies Technologies Used: Rails3, Javascript, HTML5, CSS3, jQuery, Bootstrap
+        %ul.work-summary-items
+          %li
+            Worked on a team implementing a social network connecting entrepreneurs and small businesses with one another.
+          %li
+            Created a mobile app using HTML5 and the Lungo framework that was used as a logistics checklist for building staff. This integrated into the Zendesk ticketing system.
+          %li
+            Designed and implemented an interface to control the content for TVs at any one of our building (WeWork is a collaborative work environment, with offices spanning from San Francisco to New York).
+          %li
+            %a{:href => "https://www.wework.com/"}
+              WeWork
+        %h2
+          Green Charge Networks
+        .experience-info
+          %p.title Software Engineer
+          %p.dates November 2011 - March 2013
+          %p.technologies Technologies Used: C#, .NET 4, MVC3 asp.net, Entity Framework, Silverlight; Java-spring, Maven, Hibernate
+        %ul.work-summary-items
+          %li
+            Designed and implemented heat map visualization algorithms to view electrical structure loads on map applications for utility companies. 
+          %li
+            Spoke with clients bi-weekly to demonstrate progress on our applications, record feedback on existing programs and discuss new feature requests. 
+          %li
+            Worked on the network operation center for our electrical system. I primarily worked on the communication protocol (SOAP) between our system and others.
+          %li
+            %a{:href => "http://www.greenchargenet.com"}
+              Green Charge Networks
+
+        %h2
+          Advent Software
+        .experience-info
+          %p.title Software Engineer
+          %p.dates Aug 2008 - Nov 2011
+          %p.technologies
+            C#, Microsoft Visual Studio 2005 / 2008, .NET 2.0/3.0, Infragistics, NUnit, HTML, Javascript, CSS.
+
+
+
