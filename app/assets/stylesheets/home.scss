@@ -77,11 +77,13 @@ canvas {
 }
 
 ul.icons {
+  font-size: 10px;
+  margin-top: 10px;
+  float: right;
   list-style: none;
-  text-align: center;
   li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 12px;
   }
 }
 
