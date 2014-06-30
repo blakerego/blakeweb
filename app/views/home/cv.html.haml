@@ -1,8 +1,10 @@
 
 .container
   .cv
+    .row
+      .col-md-12
+        = render 'social_media_links'
     = render 'name'
-
     .row
       .col-md-12.header
         %h1
@@ -11,7 +13,7 @@
         %h2
           Columbia University
         %ul
-          %li
+          %%li
             School of Engineering and Applied Science
           %li
             Graduated May 2008 with a Bachelor of Science
