@@ -17,12 +17,25 @@ body {
 }
 
 .name {
-  margin: 10% auto;
-  font-size: 42px;
-  text-align: center;
   font-family: 'BohemianTypewriter';
+  font-size: 42px;
   border-top: 5px solid;
   border-bottom: 5px solid;
+  margin: 10% auto;
+}
+
+.section-nav {
+  font-size: 15px;
+  font-weight: bold;
+  word-spacing: 20px;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  margin: 7% auto;
+  text-transform: uppercase;
+}
+
+.name, .section-nav {
+  text-align: center;
   padding: 6px;
   margin-bottom: 12px;
   width: 100%;
@@ -85,17 +98,19 @@ ul.icons {
     display: inline;
     margin-right: 12px;
   }
-  a {
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  &:visited {
     color: #000000;
+  }
+  &:hover {
     text-decoration: none;
-    &:visited {
-      color: #000000;
-    }
-    &:hover {
-      text-decoration: none;
-    }
   }
 }
+
 
 .cv {
   h1, h2 {
