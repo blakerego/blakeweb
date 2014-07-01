@@ -83,9 +83,11 @@ BalloonDemo = (function(_super) {
     $(function () {
       $('.focusOnHover').hover(function (event) {
         var element = $(this);
+        var percentage = element.offset().top / document.body.clientHeight;
+        var screenPosition = percentage * document.documentElement.clientHeight;
         $balloonInstance.mousemove(event,
                                    element.offset().left + (element.width() / 2),
-                                   450);
+                                   screenPosition);
       }, function(event) {
         // Reset to center.
         $balloonInstance.mousemove(event);
