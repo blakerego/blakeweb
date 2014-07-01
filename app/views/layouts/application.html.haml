@@ -1,0 +1,13 @@
+!!! 5
+
+%html
+  %head
+    %title Blake Jon Rego
+    = stylesheet_link_tag    "application", :media => "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta{:name => "viewport", :content => "width=400px"}
+
+    = yield
+
+
