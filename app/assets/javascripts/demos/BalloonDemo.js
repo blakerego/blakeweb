@@ -87,7 +87,7 @@ BalloonDemo = (function(_super) {
         var screenPosition = percentage * document.documentElement.clientHeight;
         $balloonInstance.mousemove(event,
                                    element.offset().left + (element.width() / 2),
-                                   screenPosition);
+                                   screenPosition + (element.height() / 2));
       }, function(event) {
         // Reset to center.
         $balloonInstance.mousemove(event);

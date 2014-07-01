@@ -13,6 +13,10 @@
   = render 'section_nav'
 :javascript
   (function() {
+    var menuElement = $('.focusOnHover').first();
+    if (menuElement.offset().top + menuElement.height() < document.documentElement.clientHeight) {
+      $('body').css('overflow', 'hidden')
+    }
 
     // Available demos.
     var DEMOS = {
