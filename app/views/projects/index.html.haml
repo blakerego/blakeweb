@@ -1,21 +1,24 @@
 
 .container
-  .cv
+  .projects-page
     .row
       .col-md-12
         = render '/home/social_media_links'
     = render '/home/name'
 
-    - @projects.each do |project|
-      .project
-        %h1= project.name
-        %p= project.description
-        .btn
-          = link_to 'View Project', project.live_link
-        .btn
-          = link_to 'View Source',  project.code_link
-        .btn
-          = link_to 'Read More', project.read_more_link
-        .btn
-          %td= project.image_url
-        %td= link_to 'Show', project
+    .projects
+      - @projects.each do |project|
+        .project.col-md-4.col-sm-6.col-xs-12
+          .project-title
+            %h1= project.name
+          = image_tag project.image_url
+          %p= project.description
+          .row.links
+            - if !project.live_link.empty?
+              %span.btn.btn-link.col-md-4
+                = link_to 'View Project', project.live_link, :class => 'btn'
+            - if !project.code_link.empty?
+              %span.btn.col-md-4
+                = link_to 'View Source',  project.code_link
+            %span.btn.col-md-4
+              = link_to 'Read More', project

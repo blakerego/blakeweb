@@ -1,3 +1,14 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.projects-page {
+  .projects {
+    .project {
+      .project-title {
+        min-height: 100px;
+        text-align: center;
+      }
+    }
+  }
+}
