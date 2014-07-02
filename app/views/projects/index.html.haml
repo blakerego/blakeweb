@@ -1,0 +1,14 @@
+
+- @projects.each do |project|
+  .project
+    %h1= project.name
+    %p= project.description
+    .btn
+      = link_to 'View Project', project.live_link
+    .btn
+      = link_to 'View Source',  project.code_link
+    .btn
+      = link_to 'Read More', project.read_more_link
+    .btn
+      %td= project.image_url
+    %td= link_to 'Show', project
