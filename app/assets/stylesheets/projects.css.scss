@@ -3,11 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .projects-page {
+  h1 {
+    font-family: 'BohemianTypewriter';
+  }
   .projects {
     .project {
       .project-title {
         min-height: 100px;
         text-align: center;
+      }
+      .description {
+        margin: 10px 0;
+        padding: 0px 2px;
       }
     }
   }
