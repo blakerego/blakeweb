@@ -11,10 +11,11 @@
       .title
         %h1
           = @project.name
-      .image
-        = image_tag @project.image_url
-      .description
-        = @project.description
-
+      - if (!@project.details.nil?)
+        .details
+          = render '/projects/details/' + @project.details
+      - else 
+        .description
+          = @project.description
 
     = render '/home/section_nav'

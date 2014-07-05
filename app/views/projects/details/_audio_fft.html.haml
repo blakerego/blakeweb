@@ -1,0 +1,19 @@
+.video
+  %iframe{:src => "https://www.facebook.com/video/embed?video_id=593040450022", :width => "640", :height => "360", :frameborder => "0"}
+
+%h3
+  Background
+%p
+  The light fixtures you see are Color Kinetics light arrays. There are currently 24 set up in the room. Each one has 45 LEDs- 15 red, green and blue. The intensities of each of these can be controlled on 0 to 255 scale, enabling the user a range of 24-bit color. By using different combinations of these, all intermediate colors are possible.
+%p
+  We can send color to the lights via a circuit board that contains an ethernet device and a 150W power supply. We connected this to a wireless router. To send information to the device, there is a specific UDP packet structure. We developed code around this in python.
+%p
+  We inherited the lights themselves and the power supply / network board. Everything else we designed (software) or fabricated (wires) ourselves.
+
+%h3
+  What's going on in the video
+
+%p
+  We're opening up a .wav file, reading it, and performing an FFT on the data. There are as many frequency bands in the FFT as there are lights (so each light is assigned a frequency band). The power of each band determines a color. When power = 0, the lights are off. Between power=0 and power=MAX_POWER/2, green ranges from 0 to 255. Between power=MAX_POWER/2 to MAX_POWER, green goes from 255 to 0 while red goes from 0 to 255.
+%p
+  We also have tried a very elementary beat detection technique. We took the average power from each of the frequency bands and compared them to a threshold value that we specify. If the average is equal to or greater than the threshold, we set the blue to 255. If not, the blues are off. We are still working out the kinks.
