@@ -1,5 +1,6 @@
-asset 'angular', '1.2.13'
+asset 'angular', '1.2.24'
 asset 'angular-route'
 asset 'angular-resource'
 asset 'angular-mocks'
 asset 'angular-ui-bootstrap-bower'
+asset 'coffee-physics', 'git@github.com:blakerego/Coffee-Physics.git'
