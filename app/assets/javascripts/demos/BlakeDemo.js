@@ -15,7 +15,7 @@ BlakeDemo = (function(_super) {
     return _ref;
   }
 
-  BlakeDemo.prototype.mousemove = function(event) {
+  BlakeDemo.prototype.mousemove = function(event, x, y) {
     var touch;
 
     event.preventDefault();
@@ -23,7 +23,12 @@ BlakeDemo = (function(_super) {
       touch = event.touches[0];
       return this.mouse.pos.set(touch.pageX, touch.pageY);
     } else {
-      return this.mouse.pos.set(this.width / 2, this.height / 3);
+      if (!this.inside && (x == null || y == null)) {
+        return this.mouse.pos.set(this.width / 2, this.height / 3);
+      } else if (event.type === "mouseenter") {
+        this.inside = true;
+        return this.mouse.pos.set(x, y);
+      }
     }
 
   };
@@ -72,8 +77,31 @@ BlakeDemo = (function(_super) {
     this.renderer.mouse = this.mouse;
     this.renderer.init(this.physics);
     this.mousemove({'preventDefault' : function (){}} );
+
+    var $balloonInstance = this;
+    $balloonInstance.inside = false;
+    $(function () {
+      $('.focusOnHover').hover(function (event) {
+        var element = $(this);
+        var percentage = element.offset().top / document.body.clientHeight;
+        var screenPosition = percentage * document.documentElement.clientHeight;
+        $balloonInstance.mousemove(event,
+                                   element.offset().left + (element.width() / 2),
+                                   screenPosition + (element.height() / 2));
+      }, function(event) {
+        // Reset to center.
+        $balloonInstance.mousemove(event);
+      });
+
+      /// Re-set when hovering over main image
+      $('.profile-image').hover(function (event) {
+        $balloonInstance.inside = false;
+      });
+    });
+
     return this.resize();
   };
+
 
   return BlakeDemo;
 
