@@ -18,12 +18,6 @@
       $('body').css('overflow', 'hidden')
     }
 
-    // Available demos.
-    var DEMOS = {
-        'Balloon':    BlakeDemo,
-        'Cloth':      ClothDemo
-    };
-
     var list;
     var demo;
 
@@ -33,90 +27,36 @@
     var renderer;
     var container;
 
-    var $renderer;
-
     // Initialises the testbed and starts the default demo.
     function init() {
+      items = {};
 
-        items = {};
+      playing = true;
+      renderer = 'WebGLRenderer';
+      container = $('#container');
 
-        playing = true;
-        renderer = 'WebGLRenderer';
-        container = $('#container');
-        $renderer = $('#renderer-select a');
-
-        var item;
-
-
-        $renderer.click(onRendererSelected);
-        $(window).bind('keydown', onKeyDown);
-
-        // Set default demo and start updating.
-        // setDemo('Balloon');
-        setDemo('Cloth');
-        update();
-    }
-
-    // Generates a click handler.
-    function generateClick(name) {
-        return function() {
-            setDemo(name);
-            return false;
-        };
+      setDemo('Cloth');
+      update();
     }
 
     // Updates current demo.
     function update() {
-
-        requestAnimationFrame(update);
-
-        if (playing && demo) {
-            demo.step();
-        }
-
+      requestAnimationFrame(update);
+      if (playing && demo) {
+        demo.step();
+      }
     }
 
     // Sets the current demo.
     function setDemo(name) {
       demoName = name
-      // Kill any running demo.
       if (demo) {
-          demo.destroy();
-          demo = null;
+        demo.destroy();
+        demo = null;
       }
-      // Initialise new demo.
-      demo = new DEMOS['Balloon']();
-      // demo = new DEMOS['Cloth']();
+      demo = new BlakeDemo();
       demo.init(container.get(0), new self[ renderer ]());
-      // Activate / deactivate links.
-      for (var id in items) {
-        if (id === name) {
-            items[id].addClass('active');
-        } else {
-            items[id].removeClass('active');
-        }
-      }
-      // Provide access from console for debugging.
       self.__demo = demo;
-    }
-
-    function onRendererSelected(event) {
-      var $selected = $(event.currentTarget);
-      renderer = $selected.data('renderer');
-      setDemo(demoName);
-      $renderer.removeClass('active');
-      $selected.addClass('active');
-      return false;
-    }
-
-    function onKeyDown(event) {
-      if (event.which === 32) {
-        event.preventDefault();
-        playing = !playing;
-        if (playing && demo) {
-            demo.physics._clock = new Date().getTime();
-        }
-      }
     }
 
     init();
