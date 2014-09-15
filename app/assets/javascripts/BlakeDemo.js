@@ -35,10 +35,9 @@ BlakeDemo = (function(_super) {
   BlakeDemo.prototype.setup = function(full) {
     var attraction, i, max, p, s, _i, _results;
 
-    if (full == null) {
+    if (full === null) {
       full = true;
     }
-    BlakeDemo.__super__.setup.apply(this, arguments);
     this.physics.integrator = new ImprovedEuler();
     attraction = new Attraction(this.mouse.pos);
     max = full ? 400 : 200;
@@ -60,8 +59,8 @@ BlakeDemo = (function(_super) {
     Demo.COLOURS = ['22242D', '3D4153', '485072', '6673A3', '97A3D3'];
     var particle, _i, _len, _ref, _ref1;
     this.container = container;
-    this.renderer = renderer != null ? renderer : new WebGLRenderer();
-    this.setup(renderer.gl != null);
+    this.renderer = renderer !== null ? renderer : new WebGLRenderer();
+    this.setup(renderer.gl !== null);
     _ref = this.physics.particles;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       particle = _ref[_i];
