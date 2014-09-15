@@ -18,18 +18,14 @@
       $('body').css('overflow', 'hidden')
     }
 
-    var list;
     var demo;
 
-    var items;
     var playing;
-    var demoName;
     var renderer;
     var container;
 
     // Initialises the testbed and starts the default demo.
     function init() {
-      items = {};
 
       playing = true;
       renderer = 'WebGLRenderer';
@@ -49,7 +45,6 @@
 
     // Sets the current demo.
     function setDemo(name) {
-      demoName = name
       if (demo) {
         demo.destroy();
         demo = null;
