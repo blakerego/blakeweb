@@ -13,29 +13,25 @@
   = render 'section_nav'
 :javascript
   (function() {
-    var menuElement = $('.focusOnHover').first();
-    if (menuElement.offset().top + menuElement.height() < document.documentElement.clientHeight) {
-      $('body').css('overflow', 'hidden')
+
+    function removeScrollFromPage() {
+      var menuElement = $('.focusOnHover').first();
+      if (menuElement.offset().top + menuElement.height() < document.documentElement.clientHeight) {
+        $('body').css('overflow', 'hidden')
+      }
     }
 
-    var demo;
+    var demo, playing, renderer, container;
 
-    var playing;
-    var renderer;
-    var container;
-
-    // Initialises the testbed and starts the default demo.
     function init() {
-
+      removeScrollFromPage();
       playing = true;
       renderer = 'WebGLRenderer';
       container = $('#container');
-
       setDemo('Cloth');
       update();
     }
 
-    // Updates current demo.
     function update() {
       requestAnimationFrame(update);
       if (playing && demo) {
@@ -43,7 +39,6 @@
       }
     }
 
-    // Sets the current demo.
     function setDemo(name) {
       if (demo) {
         demo.destroy();
@@ -57,4 +52,3 @@
     init();
 
   })();
-  
