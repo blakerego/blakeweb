@@ -26,7 +26,9 @@ BlakeDemo = (function(_super) {
         return this.mouse.pos.set(this.width / 2, this.height / 3);
       } else if (event.type === "mouseenter") {
         this.inside = true;
-        return this.mouse.pos.set(x, y);
+        if (this.mouse != null) {
+          return this.mouse.pos.set(x, y);
+        }
       }
     }
 
