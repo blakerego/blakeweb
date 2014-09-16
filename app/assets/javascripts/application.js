@@ -24,7 +24,7 @@
 
 //= require bootstrap/dist/js/bootstrap
 
-//= require_tree ../../../vendor/assets/bower_components/coffee-physics
+//= require_tree ../../../vendor/assets/bower_components/angular-physics
 
 
 //= require_tree .

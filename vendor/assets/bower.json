@@ -6,7 +6,7 @@
     "angular-resource": "latest",
     "angular-mocks": "latest",
     "angular-ui-bootstrap-bower": "latest",
-    "coffee-physics": "git@github.com:blakerego/Coffee-Physics.git",
+    "angular-physics": "git@github.com:blakerego/Coffee-Physics.git",
     "bootstrap": "latest"
   }
 }
