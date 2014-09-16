@@ -19,10 +19,11 @@
 //= require angular-ui-bootstrap-bower/ui-bootstrap.js
 //= require angular-ui-bootstrap-bower/ui-bootstrap-tpls.js
 
-
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+
+//= require bootstrap/dist/js/bootstrap
 
 //= require_tree ../../../vendor/assets/bower_components/coffee-physics
 
