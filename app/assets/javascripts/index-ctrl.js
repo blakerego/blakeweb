@@ -1,7 +1,14 @@
-angular.module('blakeHome', ['balloonModel'])
+angular.module('blakeHome', [
+  'balloonModel',
+  'physContainer',
+  'WebGLRenderer',
+  'BlakeDemo'
+  ])
 .controller('indexCtrl', function (
   $scope,
-  balloonModel
+  balloonModel,
+  BlakeDemo,
+  WebGLRenderer
   ) {
 
   $scope.balloonModel = balloonModel;
@@ -15,14 +22,13 @@ angular.module('blakeHome', ['balloonModel'])
 
   function init() {
     playing = true;
-    renderer = 'WebGLRenderer';
     container = $('#container');
     if (demo) {
       demo.destroy();
       demo = null;
     }
     demo = new BlakeDemo();
-    demo.init(container.get(0), new self[ renderer ]());
+    demo.init(container.get(0), new WebGLRenderer());
     update();
   }
 
