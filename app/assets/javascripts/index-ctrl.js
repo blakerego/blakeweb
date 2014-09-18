@@ -1,12 +1,10 @@
 angular.module('blakeHome', [
   'physContainer',
   'WebGLRenderer',
-  'BlakeDemo',
   'physBalloonPlanet'
   ])
 .controller('indexCtrl', function (
   $scope,
-  BlakeDemo,
   WebGLRenderer
   ) {
 
