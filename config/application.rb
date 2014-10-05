@@ -32,6 +32,6 @@ module Detroit
         '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
         '.js', '.css']
     end)
-
+    config.assets.precompile += [Proc.new { |path| !%w(.js .css).include?(File.extname(path)) }]
   end
 end
