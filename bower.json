@@ -8,5 +8,8 @@
     "angular-ui-bootstrap-bower": "latest",
     "angular-physics": "git@github.com:blakerego/Coffee-Physics.git",
     "bootstrap": "latest"
+  },
+  "resolutions": {
+    "angular": "1.2.26"
   }
 }
