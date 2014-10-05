@@ -3,7 +3,7 @@
 //
 
 
-//= require angular/angular
+//= require angular/angular.js
 //= require angular-ui-bootstrap-bower/ui-bootstrap-tpls.js
 //= require angular-resource/angular-resource
 //= require angular-route/angular-route
