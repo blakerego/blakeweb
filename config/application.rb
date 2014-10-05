@@ -30,6 +30,7 @@ module Detroit
         '.html', '.erb', '.haml',                 # Templates
         '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
         '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+        '.js', .'.css',
       ]
     end)
 
