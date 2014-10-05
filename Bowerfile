@@ -1,7 +1,0 @@
-asset 'angular', '1.2.24'
-asset 'angular-route'
-asset 'angular-resource'
-asset 'angular-mocks'
-asset 'angular-ui-bootstrap-bower'
-asset 'angular-physics', 'git@github.com:blakerego/Angular-Physics.git'
-asset 'bootstrap'
