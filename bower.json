@@ -6,7 +6,7 @@
     "angular-resource": "latest",
     "angular-mocks": "latest",
     "angular-ui-bootstrap-bower": "latest",
-    "angular-physics": "git@github.com:blakerego/Angular-Physics.git",
+    "angular-physics": "git://github.com/blakerego/Angular-Physics.git",
     "bootstrap": "latest"
   },
   "resolutions": {
