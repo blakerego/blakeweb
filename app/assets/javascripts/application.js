@@ -3,7 +3,7 @@
 //
 
 
-//= require ../../../vendor/assets/bower_components/angular/angular.js
+//= require ../bower_components/angular/angular.js
 //= require angular-ui-bootstrap-bower/ui-bootstrap-tpls.js
 //= require angular-resource/angular-resource
 //= require angular-route/angular-route
@@ -15,7 +15,7 @@
 
 //= require bootstrap/dist/js/bootstrap
 
-//= require_tree ../../../vendor/assets/bower_components/angular-physics
+//= require_tree ../bower_components/angular-physics
 
 
 //= require_tree .
