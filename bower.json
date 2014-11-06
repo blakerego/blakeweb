@@ -2,8 +2,5 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "angular-physics": "git://github.com/blakerego/Angular-Physics.git"
-  },
-  "resolutions": {
-    "angular": "1.2.26"
   }
 }
