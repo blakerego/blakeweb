@@ -1,13 +1,7 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "angular": "1.2.24",
-    "angular-route": "latest",
-    "angular-resource": "latest",
-    "angular-mocks": "latest",
-    "angular-ui-bootstrap-bower": "latest",
-    "angular-physics": "git://github.com/blakerego/Angular-Physics.git",
-    "bootstrap": "latest"
+    "angular-physics": "git://github.com/blakerego/Angular-Physics.git"
   },
   "resolutions": {
     "angular": "1.2.26"
