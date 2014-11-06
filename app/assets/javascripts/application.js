@@ -4,7 +4,6 @@
 
 
 //= require angular
-//= require bootstrap
 
 //= require angular-ui-bootstrap-bower/ui-bootstrap-tpls.js
 //= require angular-resource/angular-resource
@@ -13,7 +12,7 @@
 //= require angular-ui-bootstrap-bower/ui-bootstrap-tpls.js
 //= require jquery
 //= require jquery_ujs
-
+//= require bootstrap
 
 
 //= require_tree ../../../vendor/assets/bower_components/angular-physics
