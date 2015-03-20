@@ -3,7 +3,7 @@ angular.module('blakeHome', [
   'WebGLRenderer',
   'physBalloonPlanet'
   ])
-.controller('indexCtrl', function (
+.controller('indexCtrl', ['$scope', 'WebGLRenderer', function (
   $scope,
   WebGLRenderer
   ) {
@@ -13,4 +13,4 @@ angular.module('blakeHome', [
     $('body').css('overflow', 'hidden');
   }
 
-});
+}]);
