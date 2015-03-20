@@ -10,3 +10,4 @@ test: &test
   host: localhost
   database: detroit_test
   encoding: unicode
+  username: blake
