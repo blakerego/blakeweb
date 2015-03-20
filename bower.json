@@ -1,5 +1,5 @@
 {
-  "name": "dsl-generated dependencies",
+  "name": "blakeweb-home",
   "dependencies": {
     "angular-physics": "git://github.com/blakerego/Angular-Physics.git"
   }
