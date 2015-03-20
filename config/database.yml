@@ -3,6 +3,7 @@ development: &development
   host: localhost
   database: detroit_dev
   encoding: unicode
+  username: blake
   
 test: &test
   adapter: postgresql
