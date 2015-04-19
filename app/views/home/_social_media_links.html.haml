@@ -1,6 +1,15 @@
-/ %ul.icons.col-md-6.col-md-offset-3
 %ul.icons
-  %li= link_to '<i class="icon-github icon-2x"></i>'.html_safe, 'https://github.com/blakerego'
-  %li= link_to '<i class="icon-google-plus icon-2x"></i>'.html_safe, 'https://plus.google.com/118295683671011064684/posts'
-  %li= link_to '<i class="icon-facebook icon-2x"></i>'.html_safe, 'https://www.facebook.com/blake.rego'
-  / TODO: Linked-in icon
+  %li
+    %a{:href => "https://github.com/blakerego"}
+      %i.fa.fa-github.fa-2x
+  %li
+    %a{:href => "https://plus.google.com/118295683671011064684/posts"}
+      %i.fa.fa-google-plus.fa-2x
+  %li 
+    %a{:href => "https://www.facebook.com/blake.rego"}
+      %i.fa.fa-facebook.fa-2x
+
+  %li 
+    %a{:href => "https://www.linkedin.com/profile/view?id=28382584"}
+      %i.fa.fa-linkedin.fa-2x
+

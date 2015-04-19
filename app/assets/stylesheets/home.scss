@@ -78,6 +78,21 @@ body {
   .profile-image {
     text-align: center;
   }
+
+  .cv {
+    ul.icons {
+      float: center;
+      padding-left: auto;
+      padding-right: auto;
+      text-align: center;
+      a {
+        color: black;
+      }
+    }
+    p.description {
+      margin-top: 10px;
+    }
+  }
 }
 
 canvas {
@@ -113,7 +128,7 @@ a {
 
 
 .cv {
-  h1, h2 {
+  h1, h2, h3, h4 {
     font-family: 'BohemianTypewriter';
   }
   h2 {

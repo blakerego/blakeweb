@@ -1,10 +1,16 @@
 
 .container
   .cv
-    .row
-      .col-md-12
-        = render 'social_media_links'
     = render 'name'
+    .row
+      .col-md-4.col-md-offset-4
+        = render 'social_media_links'
+    .row 
+      .col-md-8.col-md-offset-2.col-sm-12
+        %p I am a technologist with a broad background and currently specialize in intrnet web applications. In the past few years, I've been working at a number of internet technology start-ups in the New York and Boston area. My roles have ranged from mobile applications, to front-end clients, to the back-end, and everything in between. Although I've worked on a number of languages and frameworks, I prefer technologies with strong communities that favor convention. Currently that means AngularJS on the front-end, and Ruby on Rails on the backend. 
+
+        %p My educational background was originally based from the natural sciences, as I studied physics at Columbia as an undergraduate.  The natural sciences led me to work in engineering laboratories - specifically, with the creation and optimization of nanoscale devices. My interests eventually evolved into work with computational simulation of nano particles, which is when I made the transition to computer programming in general. 
+
     .row
       .col-md-12.header
         %h1
@@ -30,9 +36,11 @@
           %li
             Ruby within the context of the Ruby on Rails framework
           %li
-            Python
+            Javascript: Angular, jQuery, jasmine
           %li
-            Javascript: jQuery, Angular, jasmine
+            Mobile HTML5 applications, using Cordova and the Ionic framework
+          %li
+            Python
           %li
             Front-end markup technologies, including HTML5, CSS3, SCSS, less
           %li
@@ -98,6 +106,65 @@
             Minor contributions to the implementation of features for Grid and Summary View modules.
           %li
             Wrote unit tests using NUnit.
+
+        %h2
+          Center for Molecular Modelling, University of Pennsylvania
+        .experience-info
+          %p.title Undergraduate Researcher - Department of Physics and Astronomy
+          %p.dates June 2007 - August 2007
+          %p.advisor Advisor: Professor Charlie Johnson
+          %p.description
+            In order to gain a deeper understanding of the interaction between carbon nanotubes and organic compounds, we turned our attention toward computational methods. In doing so, we performed molecular dynamics (MD) simulations on carbon nanotube structures and analyzed their iteraction with various biological molecules, including peptides, DNA and RNA. For our results, see the publications section below.
+
+        %h2
+          Nanoscale and Engineering Center, Columbia University
+        .experience-info
+          %p.title Undergraduate Researcher -  Department of Applied Physics
+          %p.dates June 2006 - August 2006
+          %p.advisor Advisor: Professor Irving Herman
+          %p.description
+            In order to gain a deeper understanding of the interaction between carbon nanotubes and organic compounds, we turned our attention toward computational methods. In doing so, we performed molecular dynamics (MD) simulations on carbon nanotube structures and analyzed their iteraction with various biological molecules, including peptides, DNA and RNA. For our results, see the publications section below.
+
+        %h2
+          Laboratory for the Research and Structure of Matter, University of Pennsylvania
+        .experience-info
+          %p.title Undergraduate Researcher -  Undergraduate Researcher - Department of Materials Science
+          %p.dates June 2006 - August 2006
+          %p.advisor Advisor: Professor David Luzzi
+          %p.description
+            Conducted experiments studying the growth rates of carbon nanotubes via chemical vapor deposition.
+
+    .row
+      .col-md-12.header
+        %h1
+          Publications
+
+      .col-md-8.col-md-offset-2.col-sm-12
+        %h2
+          Computational Study of a Nano-Biosensor: A Single-Wall Carbon Nanotube Functionalized with the Coxsackie-Adenovirus Receptor
+        %h4 Journal of Physical Chemistry B.
+        %p.dates August 27, 2009
+        %p Will appear on cover of issue 34
+        %p Author list: Robert R. Johnson, Blake Jon Rego, A.T. Charlie Johnson, Michael L. Klein
+        = link_to "Read More", "http://pubs.acs.org/doi/abs/10.1021/jp901999a"
+
+      .col-md-8.col-md-offset-2.col-sm-12
+        %h2
+          Precise Positioning of Carbon Nanotubes by AC Dielectrophoresis Using Floating Posts (invited paper)
+        %h4 Applied Physics A 86, 415-419
+        %p.dates 2007
+        %p Author list: S. Banerjee, B. White, L. Huang, B. J. Rego, S. O.Brien, and I. P. Herman
+        = link_to "Read More", "http://pubs.acs.org/doi/abs/10.1021/jp901999a"
+
+
+      .col-md-8.col-md-offset-2.col-sm-12
+        %h2
+          Precise Positioning of Carbon Nanotubes by AC Dielectrophoresis
+        %h4 Journal of Vacuum Science and Technology 24, 3173
+        %p.dates December 4, 2006
+        %p Author list: S. Banerjee, B. White, L. Huang, B. J. Rego, S. O.Brien, and I. P. Herman
+        = link_to "View at Journal", "http://avspublications.org/jvstb/resource/1/jvtbd9/v24/i6/p3173_s1"
+
 
     = render 'section_nav'
 
