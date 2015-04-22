@@ -1,11 +1,8 @@
 angular.module('blakeHome', [
-  'physContainer',
-  'WebGLRenderer',
   'physBalloonPlanet'
   ])
 .controller('indexCtrl', ['$scope', 'WebGLRenderer', function (
-  $scope,
-  WebGLRenderer
+  $scope
   ) {
 
   var menuElement = $('.focusOnHover').first();

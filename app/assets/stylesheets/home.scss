@@ -34,9 +34,14 @@ body {
   text-transform: uppercase;
 }
 
+.spacer {
+  margin-bottom: 304px;
+}
+
 .name, .section-nav {
   text-align: center;
   padding: 6px;
+  // margin-top: 304px;
   margin-bottom: 12px;
   width: 100%;
   background-color: rgba(255,255,255,0.75);
@@ -80,6 +85,11 @@ body {
   }
 
   .cv {
+    // line-height: 20px;
+    .about {
+      line-height: 30px;
+      margin-top: 10px;
+    }
     ul.icons {
       float: center;
       padding-left: auto;
