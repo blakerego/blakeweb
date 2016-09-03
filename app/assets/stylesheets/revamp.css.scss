@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Knockout';
+  src: font-url('knockout-htf49-liteweight.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.player-container {
+  position: fixed;
+  z-index: -99;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  font-family: 'Knockout';
+  margin: 0;
+  padding-left: 25px;
+  color: black;
+  height: 61px;
+  line-height: 107px;
+  background-color: white;
+  .header-name {
+    font-size: 50px;
+  }
+  .header-link {
+    
+    font-size: 30px;
+    padding-left: 25px;
+    a {
+      color: black;
+    }
+  }
+}
+
+.page-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+}

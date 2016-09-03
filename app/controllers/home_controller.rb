@@ -9,4 +9,10 @@ class HomeController < ApplicationController
   def cv
   end
 
+  def play
+  end
+
+  def revamp
+  end
+
 end
