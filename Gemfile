@@ -25,7 +25,6 @@ gem 'pry'
 gem 'pry_debug'
 gem 'pry-remote'
 gem 'pry-nav'
-gem 'newrelic_rpm'
 gem 'ckeditor'
 gem 'bower-rails'
 
