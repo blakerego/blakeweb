@@ -5,27 +5,147 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Mario';
+  src: font-url('MarioNett.ttf');
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5em;
+}
+
+
+// $bgDefault      : #e74c3c;
+// $colDefault     : #ecf0f1;
+
+$bgDefault:     rgba(159,77,64,0.9);
+$bgHighlight    : #801D15;
+// $colDefault     : #f5b6ad;
+$colDefault     : #ccc;
+$colHighlight   : #FFB0AA;
+$dropDown       : false;
+
+
+
+
+.navbar-fixed-top {
+
+  font-family: 'Mario';
+
+  .container-fluid {
+    // color: #000000;
+    .navbar-header {
+      .navbar-brand {
+        // color: #333;
+        font-size: 50px;
+        line-height: 40px;
+      }
+    }
+    .navbar-nav {
+      font-size: 25px;
+      // color: #333;
+      li {
+        a {
+          .item {
+            position: relative;
+            top: 0.3em;
+            bottom: 0;
+
+          }
+        }
+        // font-family: 'Times New Roman';
+      }
+    }
+  }
+
+  &.navbar-default {
+    background-color: $bgDefault;
+    border-color: $bgHighlight;
+    .navbar-brand {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    .navbar-text {
+      color: $colDefault; }
+    .navbar-nav {
+      > li {
+        > a {
+          color: $colDefault;
+          &:hover,  &:focus {
+            color: $colHighlight; }}
+        @if $dropDown {
+          > .dropdown-menu {
+            background-color: $bgDefault;
+            > li {
+              > a {
+                color: $colDefault;
+                &:hover,  &:focus {
+                  color: $colHighlight;
+                  background-color: $bgHighlight; }}
+              > .divider {
+                background-color: $bgHighlight;}}}}}
+      @if $dropDown {
+        .open .dropdown-menu > .active {
+          > a, > a:hover, > a:focus {
+            color: $colHighlight;
+            background-color: $bgHighlight; }}}
+      > .active {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          background-color: $bgHighlight; }}
+      > .open {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          background-color: $bgHighlight; }}}
+    .navbar-toggle {
+      border-color: $bgHighlight;
+      &:hover, &:focus {
+        background-color: $bgHighlight; }
+      .icon-bar {
+        background-color: $colDefault; }}
+    .navbar-collapse,
+    .navbar-form {
+      border-color: $colDefault; }
+    .navbar-link {
+      color: $colDefault;
+      &:hover {
+        color: $colHighlight; }}}
+  @media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu {
+      > li > a {
+        color: $colDefault;
+        &:hover, &:focus {
+          color: $colHighlight; }}
+      > .active {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          background-color: $bgHighlight; }}}
+  }
+
+
+}
+
 
 .player-container {
   position: fixed;
   z-index: -99;
   width: 100%;
   height: 100%;
+  // top: 50px;
 }
 
 .navigation {
-  font-family: 'Knockout';
+  font-family: 'Mario';
   margin: 0;
   padding-left: 25px;
   color: black;
-  height: 61px;
-  line-height: 107px;
+  height: 50px;
+  line-height: 90px;
   background-color: rgba(255,255,255,0.5);
   .header-name {
-    font-size: 50px;
+    font-size: 82px;
   }
   .header-link {
-    font-size: 30px;
+    font-size: 38px;
     padding-left: 25px;
     a {
       color: black;
