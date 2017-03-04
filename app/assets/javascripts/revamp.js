@@ -23,12 +23,11 @@ angular.module('blakeHome', ['youtube-embed'])
     'mIfx0pYM6c8',
     'Bk5g54ckleM',
     '7DGlL7A9_JM',
-    'mGS0EXXhk8M',
+    'mGS0EXXhk8M', //barcelona
     'Af-EA8H9yyA',
     'QPwn98w5D7Y',
     'PHVUd-p1hH0',
     'S2EmzmJOYZ0',
-    '6G1IwCOK-2c',
     'mJFt04vJKCw',
     'rj3fv0VUv-Y',
     'baSGcYIU4Xo',
