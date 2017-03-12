@@ -1,49 +1,9 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$navHeight: 50px;
+$standardVerticalMargin: 10px;
+$leftPagePadding: 15px;
 
-.projects-page {
-  h1 {
-    font-family: 'BohemianTypewriter';
-  }
-  .projects {
-    .project {
-      .project-title {
-        min-height: 100px;
-        text-align: center;
-      }
-      .description {
-        margin: 10px 0;
-        padding: 0px 2px;
-      }
-      .image {
-        text-align: center;
-      }
+.blakeweb-projects {
+  margin-top: $navHeight + $standardVerticalMargin;
+  padding-left: $leftPagePadding;
 
-    }
-  }
-}
-
-.project-individual-page {
-  h1 {
-    font-family: 'BohemianTypewriter';
-  }
-  .title {
-    text-align: center;
-  }
-  .image {
-    text-align: center;
-  }
-  .description {
-    margin: 30px 0 0 0;
-  }
-  .details {
-    a {
-      text-decoration: underline;
-      color: blue;
-    }
-    .video {
-      text-align: center;
-    }
-  }
 }

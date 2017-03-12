@@ -1,5 +1,5 @@
-angular.module('blakeHome', ['youtube-embed'])
-.controller('revampCtrl', ['$scope', 
+angular.module('blakeHome', ['youtube-embed', 'wu.masonry'])
+.controller('revampCtrl', ['$scope',
   function ($scope) {
   
 
@@ -34,7 +34,7 @@ angular.module('blakeHome', ['youtube-embed'])
     'OdBVaRZkxS8',
   ];
   function getNextVideo() {
-    var nextVid = videos[Math.floor(Math.random()*100) % videos.length];
+    var nextVid = videos[Math.floor(Math.random() * 100) % videos.length];
     if (nextVid === $scope.videoId) {
       getNextVideo();
     } else {
