@@ -11,6 +11,7 @@
       .title
         %h1
           = @project.name
+      = image_tag @project.image_url_url
       - if (!@project.details.nil?)
         .details
           = render '/projects/details/' + @project.details

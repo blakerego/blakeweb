@@ -7,3 +7,9 @@ rails s
 
 Using the following buildpack:
 heroku config:set BUILDPACK_URL='git://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower'
+
+For AWS storage, set your credentials using the following environment variables - 
+
+- BLAKEWEB_AWS_ACCESS_KEY_ID
+- BLAKEWEB_AWS_SECRET_ACCESS_KEY
+- BLAKEWEB_S3_BUCKET

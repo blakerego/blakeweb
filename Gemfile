@@ -11,6 +11,11 @@ gem 'jquery-rails'
 
 gem 'jbuilder', '~> 1.2'
 
+gem 'carrierwave'
+gem 'rmagick'
+gem 'fog'
+gem 'carrierwave_direct'
+gem 'sidekiq'
 group :doc do
   gem 'sdoc', require: false
 end
