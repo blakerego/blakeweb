@@ -6,4 +6,21 @@ $leftPagePadding: 15px;
   margin-top: $navHeight + $standardVerticalMargin;
   padding-left: $leftPagePadding;
 
+  .masonry-brick {
+    position: relative;
+    margin-bottom: 3px;
+    .project-banner {
+      background-color: black;
+      color: white;
+      .project-name {
+        padding-left: 5px;
+        font-size: 20px;
+      }
+      .project-description {
+        padding-left: 5px;
+        width: 300px;
+        height: 45px;
+      }
+    }
+  }
 }

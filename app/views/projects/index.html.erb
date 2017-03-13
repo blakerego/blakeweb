@@ -3,18 +3,17 @@
   <%= render :partial => 'shared/header' %>
 
   <div class="blakeweb-projects">
-
-    <div class="blakeweb-masonry-container" ng-if="projects && projects.length > 0">
-      <masonry
-        reload-on-resize
-        load-images="false"
-        masonry-options="masonryOptions">
-        <div
-          masonry-brick
-          class="masonry-brick"
-          ng-repeat="project in projects"
-          >
-          <img ng-src="{{project.image_url}}" alt="{{project.name}}">
+    <div masonry
+      load-images="true"
+      masonry-options="masonryOptions"
+      column-width="300">
+      <!-- Note that .project-description width is set in project.scss -->
+      <div
+        class="masonry-brick"
+        ng-repeat="project in projects"
+        >
+        <img ng-src="{{project.image_url}}" alt="{{project.name}}">
+        <div class="project-banner">
           <div class="project-name">
             {{project.name}}
           </div>
@@ -22,7 +21,7 @@
             {{project.description}}
           </div>
         </div>
-      </masonry>
+      </div>
     </div>
   </div>
 

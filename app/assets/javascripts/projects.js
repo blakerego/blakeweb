@@ -7,8 +7,9 @@ angular.module('blakeHome')
 
     $scope.masonryOptions = {
       transitionDuration: '1s',
-      columnWidth: 200,
-      gutter: 0
+      columnWidth: 300,
+      gutter: 3,
+      originLeft: true
     };
 
     $http.get('/projects.json').then(function (response) {
