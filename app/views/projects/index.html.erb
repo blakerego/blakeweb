@@ -12,7 +12,7 @@
         class="masonry-brick"
         ng-repeat="project in projects"
         >
-        <img ng-src="{{project.image_url}}" alt="{{project.name}}">
+        <img ng-src="{{project.image_url.url}}" alt="{{project.name}}">
         <div class="project-banner">
           <div class="project-name">
             {{project.name}}
