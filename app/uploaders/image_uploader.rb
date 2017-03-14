@@ -9,6 +9,11 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   storage :fog
 
+  def extension_white_list
+    %w(png jpg gif bmp)
+  end
+
+
   # include CarrierWave::MimeTypes
   # process :set_content_type
 

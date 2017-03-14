@@ -13,6 +13,17 @@
   line-height: 1.5em;
 }
 
+@font-face {
+  font-family: 'adamcg';
+  /// https://www.behance.net/gallery/13756975/ADAM-Free-Typeface
+  src: font-url('ADAMCGPRO.otf');
+}
+
+@font-face {
+  font-family: 'League Gothic';
+  /// https://www.theleagueofmoveabletype.com/league-gothic
+  src: font-url('LeagueGothic-Regular.otf');
+}
 
 $bgDefault:     rgba(255,255,255,0.5);
 $bgHighlight:   rgba(255,255,255,0.5);

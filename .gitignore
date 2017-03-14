@@ -18,3 +18,5 @@
 vendor/assets/bower_components/
 bower_components/*
 node_modules/*
+
+public/uploads/tmp/*
