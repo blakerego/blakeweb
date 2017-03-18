@@ -15,3 +15,10 @@ For AWS storage, set your credentials using the following environment variables 
 - BLAKEWEB_AWS_ACCESS_KEY_ID
 - BLAKEWEB_AWS_SECRET_ACCESS_KEY
 - BLAKEWEB_S3_BUCKET
+
+
+=== Wordpress CMS Integration
+
+To enable access to a wordpress.com blog, use the following environment variable -
+
+- BLAKEWEB_WORDPRESS_SITE_ID

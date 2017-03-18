@@ -12,6 +12,8 @@ Detroit::Application.routes.draw do
   get '/play' => 'home#play'
   get '/revamp' => 'home#revamp'
 
+  get '/wordpress/posts' => 'wordpress_posts#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
