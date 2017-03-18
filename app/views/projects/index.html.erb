@@ -11,6 +11,7 @@
       <div
         class="masonry-brick"
         ng-repeat="project in projects"
+        ng-click="projectClicked(project)"
         >
         <img ng-src="{{project.image_url.url}}" alt="{{project.name}}">
         <div class="project-banner">

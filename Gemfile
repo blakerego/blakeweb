@@ -33,9 +33,6 @@ gem 'pry-nav'
 gem 'ckeditor'
 gem 'bower-rails'
 
-# gem 'wordpress-rails-connection', :path => '../WordpressRailsConnection'
-gem 'wordpress-rails-connection'
-
 source 'https://rails-assets.org'
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-angular'

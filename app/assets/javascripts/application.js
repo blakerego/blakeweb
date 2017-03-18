@@ -31,5 +31,4 @@
 
 
 //= require ../../../vendor/assets/bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.js
-
 //= require_tree .

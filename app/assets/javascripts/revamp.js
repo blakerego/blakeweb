@@ -1,4 +1,4 @@
-angular.module('blakeHome', ['youtube-embed', 'wu.masonry'])
+angular.module('blakeHome', ['youtube-embed', 'wu.masonry', 'WordpressConnection'])
 .controller('revampCtrl', ['$scope',
   function ($scope) {
   
