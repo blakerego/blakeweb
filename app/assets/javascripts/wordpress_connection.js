@@ -17,6 +17,12 @@ angular.module('WordpressConnection', [])
       return $http.get(wordpressConnection.baseUrl +
         wordpressConnection.siteId + '/posts?page=' +
         page + '&number=' + perPage);
+    },
+
+    getPostBySlug: function (slug) {
+      return $http.get(wordpressConnection.baseUrl +
+        wordpressConnection.siteId + '/posts/slug:' +
+        slug);
     }
   };
 

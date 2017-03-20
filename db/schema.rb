@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807153500) do
+ActiveRecord::Schema.define(version: 20170318215539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140807153500) do
     t.datetime "updated_at"
     t.string   "details"
     t.integer  "order"
+    t.string   "wordpress_slug"
   end
 
 end

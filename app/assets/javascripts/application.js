@@ -20,6 +20,7 @@
 //= require angular-ui-bootstrap-bower/ui-bootstrap-tpls.js
 //= require angular-resource/angular-resource
 //= require angular-route/angular-route
+//= require angular-rails-templates
 //= require angular-ui-bootstrap-bower/ui-bootstrap.js
 //= require angular-ui-bootstrap-bower/ui-bootstrap-tpls.js
 //= require jquery_ujs

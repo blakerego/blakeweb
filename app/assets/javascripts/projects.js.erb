@@ -1,0 +1,50 @@
+angular.module('project-app', ['wu.masonry', 'WordpressConnection',  'templates', 'ngRoute'])
+
+.config(function($routeProvider) {
+  $routeProvider
+    // route for the home page
+    .when('/', {
+      templateUrl : 'projects/index.html',
+      controller  : 'projectCtrl'
+    });
+
+    // // route for the about page
+    // .when('/about', {
+    //     templateUrl : 'pages/about.html',
+    //     controller  : 'aboutController'
+    // })
+
+    // // route for the contact page
+    // .when('/contact', {
+    //     templateUrl : 'pages/contact.html',
+    //     controller  : 'contactController'
+    // });
+})
+
+
+.controller('projectCtrl', ['$scope', '$http', 'WordpressConnection',
+  function ($scope, $http, WordpressConnection) {
+
+    var wordpressConnection = new WordpressConnection('blakewebprojects.wordpress.com');
+
+    $scope.projects = [];
+
+    $scope.masonryOptions = {
+      transitionDuration: '1s',
+      columnWidth: 300,
+      gutter: 3,
+      originLeft: true
+    };
+
+    $http.get('/projects.json').then(function (response) {
+      $scope.projects = response.data;
+    });
+
+    $scope.projectClicked = function (project) {
+      wordpressConnection.getPostBySlug(project.wordpress_slug).then(function (response) {
+        console.log(response.data);
+      });
+    };
+
+  }
+]);

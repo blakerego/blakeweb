@@ -5,6 +5,9 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all.order(:order)
+    if request.format.symbol == :json
+      render  json: @projects.to_json
+    end
   end
 
   # GET /projects/1
@@ -69,6 +72,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description, :live_link, :code_link, :read_more_link, :image_url)
+      params.require(:project).permit(:name, :description, :live_link, :code_link, :read_more_link, :image_url, :wordpress_slug)
     end
 end
