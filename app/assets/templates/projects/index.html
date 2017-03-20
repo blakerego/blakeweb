@@ -1,0 +1,21 @@
+<div masonry
+  load-images="true"
+  masonry-options="masonryOptions"
+  column-width="300">
+  <!-- Note that .project-description width is set in project.scss -->
+  <div
+    class="masonry-brick"
+    ng-repeat="project in projects"
+    ng-click="projectClicked(project)"
+    >
+    <img ng-src="{{project.image_url.url}}" alt="{{project.name}}">
+    <div class="project-banner">
+      <div class="project-name">
+        {{project.name}}
+      </div>
+      <div class="project-description">
+        {{project.description}}
+      </div>
+    </div>
+  </div>
+</div>

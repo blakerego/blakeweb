@@ -11,7 +11,4 @@ Detroit::Application.routes.draw do
   get '/cv' => 'home#cv'
   get '/play' => 'home#play'
   get '/revamp' => 'home#revamp'
-
-  get '/wordpress/posts' => 'wordpress_posts#index'
-
 end
