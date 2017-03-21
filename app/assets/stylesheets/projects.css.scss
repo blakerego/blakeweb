@@ -11,6 +11,31 @@ $brick-width: 300px;
 .blakeweb-projects {
   margin-top: $navHeight + $standardVerticalMargin;
   padding-left: $leftPagePadding;
+  color: #354147;
+  // font-family: 'Helvetica, arial, sans-serif';
+  font-family: 'Helvetica';
+
+  h1, h2, h3 {
+    font-family: 'Helvetica Bold';
+  }
+
+  .page-content {
+    line-height: 1.8em;
+    font-size: 16px;
+    img {
+      display: block;
+      margin: auto;
+      text-align: center;
+    }
+
+    p {
+      margin: 20px 0
+    }
+
+    h1 {
+      margin: 40px 0 20px;
+    }
+  }
 
   .masonry-brick {
     position: relative;
