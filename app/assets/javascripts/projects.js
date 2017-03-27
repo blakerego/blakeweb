@@ -5,28 +5,17 @@ angular.module('project-app', ['wu.masonry', 'WordpressConnection',  'templates'
   $stateProvider
     // route for the home page
     .state({
-      name: 'project-index',
+      name: 'projects',
       url: '/projects',
       templateUrl : 'projects/index.html',
       controller  : 'projectCtrl'
     })
     .state({
       name: 'project-show',
-      url: '/projects/:slug',
+      url: '/projects/slug/:slug',
       templateUrl: 'projects/show.html',
       controller: 'projectShowCtrl'
     });
-    // // route for the about page
-    // .when('/about', {
-    //     templateUrl : 'pages/about.html',
-    //     controller  : 'aboutController'
-    // })
-
-    // // route for the contact page
-    // .when('/contact', {
-    //     templateUrl : 'pages/contact.html',
-    //     controller  : 'contactController'
-    // });
   $urlRouterProvider.otherwise('/');
   $locationProvider.html5Mode({
     enabled: true,
@@ -63,11 +52,14 @@ angular.module('project-app', ['wu.masonry', 'WordpressConnection',  'templates'
   }
 ])
 
-.controller('projectShowCtrl',['$scope','$stateParams', 'WordpressConnection', '$sce',
-  function ($scope, $stateParams, WordpressConnection, $sce) {
+.controller('projectShowCtrl',['$scope','$stateParams', 'WordpressConnection', '$sce', '$state',
+  function ($scope, $stateParams, WordpressConnection, $sce, $state) {
 
-    var wordpressConnection = new WordpressConnection('blakewebprojects.wordpress.com');
     var wordpress_slug = $stateParams['slug'];
+    if (wordpress_slug == null || wordpress_slug === '') {
+      $state.go('projects');
+    }
+    var wordpressConnection = new WordpressConnection('blakewebprojects.wordpress.com');
     wordpressConnection.getPostBySlug(wordpress_slug).then(function (response) {
       $scope.pageContent = $sce.trustAsHtml(response.data.content);
     });

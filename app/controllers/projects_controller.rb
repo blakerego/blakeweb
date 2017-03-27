@@ -13,6 +13,9 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    if (@project.wordpress_slug)
+      redirect_to "/projects/slug/#{@project.wordpress_slug}"
+    end
   end
 
   # GET /projects/new
