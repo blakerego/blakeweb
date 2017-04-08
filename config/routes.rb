@@ -1,11 +1,14 @@
 Detroit::Application.routes.draw do
-  resources :projects
-  get '/projects/slug/*path' => 'projects#index'
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'home#index'
+  resources :projects do 
+      collection do
+      post 'reorder'
+    end
+  end
+
+  get '/projects/slug/*path' => 'projects#index'
+  match '/project_admin', :to => 'projects#admin', :via => 'get'
+
   root 'home#revamp'
   get '/page2' => 'home#page2'
   get '/cv' => 'home#cv'

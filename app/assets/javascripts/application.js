@@ -28,7 +28,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require ../../../vendor/assets/bower_components/underscore/underscore-min
-
+//= require ../../../vendor/assets/bower_components/jquery-ui/jquery-ui.min
 
 
 

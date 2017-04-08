@@ -10,6 +10,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def admin
+    @projects = Project.all.order(:order)
+  end
+
   # GET /projects/1
   # GET /projects/1.json
   def show
@@ -66,6 +70,17 @@ class ProjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def reorder
+    updated = []
+    params['projects'].each do |project_rank|
+      assignment = Project.find(project_rank[0])
+      assignment.update_attributes(:order => project_rank[1])
+      updated << assignment
+    end
+    render :json => {'updated' => updated}
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
