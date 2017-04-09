@@ -41,6 +41,7 @@ $brick-width: 300px;
   }
 
   .masonry-brick {
+    cursor: pointer;
     position: relative;
     margin-bottom: 3px;
     background-color: #aaaaaa;
@@ -48,7 +49,7 @@ $brick-width: 300px;
     width: 300px;
     max-width: $brick-width;
     img {
-      max-width: $brick-width
+      max-width: $brick-width;
     }
     .project-banner {
       background-color: black;
