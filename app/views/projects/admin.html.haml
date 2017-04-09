@@ -16,6 +16,7 @@
 
   = link_to 'New project', new_project_path, :class => 'btn btn-default new_project'
 
+  = link_to "Logout", destroy_user_session_path, method: :delete
 
 :javascript
   $(function()

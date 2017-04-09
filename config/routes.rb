@@ -8,7 +8,7 @@ Detroit::Application.routes.draw do
   end
 
   get '/projects/slug/*path' => 'projects#index'
-  match '/project_admin', :to => 'projects#admin', :via => 'get'
+  match '/projects_admin', :to => 'projects#admin', :via => 'get'
 
   root 'home#revamp'
   get '/page2' => 'home#page2'
