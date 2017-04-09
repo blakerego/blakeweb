@@ -235,6 +235,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (4.7.5)
     multi_json (1.10.1)
+    newrelic_rpm (4.0.0.332)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
@@ -356,6 +357,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   meta_request
+  newrelic_rpm
   pg
   pry
   pry-nav

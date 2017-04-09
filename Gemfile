@@ -43,3 +43,5 @@ gem 'rails-assets-angular-ui-bootstrap-bower'
 gem 'angular-rails-templates'
 
 gem 'devise'
+
+gem 'newrelic_rpm'
