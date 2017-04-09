@@ -1,0 +1,48 @@
+.project_admin
+  %h1.heading Live Projects
+
+  %ul.sortable.projects
+    - @projects.each do |project|
+      %li.ui-state-default.live.project{"data-project-id" => "#{project.id}"}
+        = render 'quick_view', :project => project
+
+  - if @secret_projects.present?
+    %h1.heading Top Secret projects
+    %ul.projects
+      - @secret_projects.each do |project|
+        %li.project.secret
+          = render 'quick_view', :project => project
+    %br
+
+  = link_to 'New project', new_project_path, :class => 'btn btn-default new_project'
+
+
+:javascript
+  $(function()
+  {
+    window.PROJECT_ADMIN = function(){ }
+
+    PROJECT_ADMIN.prototype = {
+      init: function() 
+      {
+        $('.sortable').sortable(
+        {
+          update: function(event, ui)
+          {
+            var ordered = {};
+            $.each($('.sortable li'), function(rank, project)
+            {
+              ordered[$(project).data('project-id')] = rank;
+            });
+
+            $.post('/projects/reorder', {"projects": ordered});
+
+          }
+        });
+      }
+    }
+
+    var admin = new PROJECT_ADMIN();
+    admin.init();
+  })
+

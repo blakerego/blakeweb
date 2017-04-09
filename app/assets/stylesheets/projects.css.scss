@@ -79,3 +79,71 @@ $brick-width: 300px;
     }
   }
 }
+
+.project_admin
+{
+  margin: 36px;
+  font-size: 13px;
+  background-color: white;
+  border: 3px solid black;
+  padding: 30px;
+
+  ul.projects
+  {
+    width: 1000px;
+    list-style: none;
+    li
+    {
+      h4.project_name
+      {
+        text-decoration: underline;
+      }
+      height: 100%;
+      padding: 5px;
+      margin: 2px 0 2px 0;
+
+    }
+    li.live
+    {
+      width: 230px;
+      display: inline-block;
+      cursor: move;
+    }
+    li.secret
+    {
+      background-color: #FEFFCD;
+      width: 300px;      
+    }
+  }
+  h1.heading, .new_project
+  {
+    margin-left: 40px;
+  }
+
+  .sizing_area
+  {
+    border: 2px solid black;
+    width: 275px;
+    height: 205px;
+    margin: 0px auto;
+    background-color: #aaa;
+  }
+
+  ul.groups
+  {
+    width: 1000px;
+    list-style: none;
+    li
+    {
+      width: 230px;
+      h4.project_name
+      {
+        text-decoration: underline;
+      }
+      height: 100%;
+      padding: 5px;
+      margin: 2px 0 2px 0;
+    }  
+  }
+
+}

@@ -14,6 +14,7 @@
 //= require ../../../vendor/assets/bower_components/masonry/dist/masonry.pkgd.min
 //= require ../../../vendor/assets/bower_components/imagesloaded/imagesloaded.js
 //= require angular
+//= require ../../../vendor/assets/bower_components/angular-wordpress/lib/angular-wordpress.js
 //= require ../../../vendor/assets/bower_components/angular-masonry/angular-masonry
 
 
@@ -27,7 +28,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require ../../../vendor/assets/bower_components/underscore/underscore-min
-
+//= require ../../../vendor/assets/bower_components/jquery-ui/jquery-ui.min
 
 
 
