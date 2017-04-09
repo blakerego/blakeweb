@@ -41,3 +41,5 @@ gem 'rails-assets-angular-resource'
 gem 'rails-assets-angular-mocks'
 gem 'rails-assets-angular-ui-bootstrap-bower'
 gem 'angular-rails-templates'
+
+gem 'devise'
